@@ -1,0 +1,9 @@
+4AJ.2.2/mydroid/out
+4AJ.2.2/kernel/android-3.0/arch/arm/boot/zImage
+4AJ.2.2/u-boot/u-boot.img
+4AJ.2.2/omap4_sd_files_panda/MLO
+4AJ.2.2/omap4_sd_files_panda/*.img
+4AJ.2.2/omap4_sd_files_panda/*.orig
+4AJ.2.2/omap4_sd_files_panda/*.bin
+4AJ.2.2/omap4_sd_files_panda/zImage
+
