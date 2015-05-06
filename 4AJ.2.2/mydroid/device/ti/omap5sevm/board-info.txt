@@ -1,0 +1,2 @@
+require board=omap5430evmboard
+

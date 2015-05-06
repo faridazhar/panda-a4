@@ -1,0 +1,16 @@
+wifi.interface=wlan0
+com.ti.omap_enhancement=true
+com.ti.blueti_enhancement=true
+com.ti.omap_enhancement_s3d=true
+com.ti.nfcti_enhancement=true
+
+#sEVM Thermal sensor related properties
+pcb.temp.sensor.sysfs.node=/d/thermal_debug/devices/tmp102_sensor/temperature
+cpu.temp.sensor.sysfs.node=/d/thermal_debug/devices/omap_cpu_sensor/temperature
+hotspot.temp.sensor.sysfs.node=/d/thermal_debug/devices/omap_cpu_governor/hotspot_temp
+gpu.temp.sensor.sysfs.node=/d/thermal_debug/devices/omap_gpu_sensor/temperature
+core.temp.sensor.sysfs.node=/d/thermal_debug/devices/omap_core_sensor/temperature
+
+#sEVM Battery related properties
+batt.temp.sensor.sysfs.node=/sys/class/power_supply/bq27530-0/temp
+charge.current.sysfs.node=/sys/class/power_supply/bq27530-0/current_now

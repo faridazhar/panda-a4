@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="board_id_header">TI Board ID Application</string>
+    <string name="app_name">TI Board ID App</string>
+    <string name="build_info_title">Build Informaion </string>
+    <string name="dev_info_title">Device Information </string>
+    <string name="runtime_info_title">Runtime Information</string>
+    <string name="proc_family">Processor Family =   </string>
+    <string name="proc_type">Processor Type = </string>
+    <string name="proc_version">Processor Version = </string>
+    <string name="proc_max_freq">Maximum Freq = </string>
+    <string name="proc_rated_freq">Rated Frequency = </string>
+    <string name="apps_brd_rev">Apps Board Rev = </string>
+    <string name="cmd_line">Command Line = </string>
+    <string name="kernel_version">Kernel Version = </string>
+    <string name="curr_gov">Current Governor = </string>
+    <string name="bootloader_version">Bootloader Version = </string>
+    <string name="build_version">Bu‎ild Version = </string>
+    <string name="brd_rev">Board Revision = </string>
+    <string name="ser_no">Serial Number = </string>
+    <string name="build_type_string">Build Type = </string>
+    <string name="crypto_string">Crypto State = </string>
+    <string name="pvr_string">PVR/SGX Version = </string>
+    <string name="gov_change_string">Change Governor</string>
+    <string name="cpu1_string">CPU1 Status = </string>
+    <string name="wilink_version">WiLink Version = </string>
+    <string name="dpll_trim_string">DPLL Trimmed = </string>
+    <string name="rbb_trim_string">RBB Trimmed = </string>
+    <string name="prod_id_string">Production ID = </string>
+    <string name="die_id_string">Die ID = </string>
+</resources>

@@ -1,0 +1,23 @@
+
+To clone the Android 2.6.29 kernel
+# git clone git://git.omapzoom.org/kernel/omap.git android-2.6.29
+# cd android-2.6.29
+# git checkout p-android-omap-2.6.29 --track origin/p-android-omap-2.6.29
+
+To update the Android 2.6.29 kernel
+# git pull
+
+To submit a patch on the current branch to the Android 2.6.29 kernel
+# git push ssh://your_gerrit_id@review.omapzoom.org:29418/kernel/omap.git HEAD:refs/for/p-android-omap-2.6.29
+
+To clone the Android 2.6.32 kernel
+# git clone git://git.omapzoom.org/kernel/omap.git android-2.6.32
+# cd android-2.6.32
+# git checkout p-android-omap-2.6.29 --track origin/p-android-omap-2.6.32
+
+To update the Android 2.6.32 kernel
+# git pull
+
+To submit a patch on the current branch to the Android 2.6.32 kernel
+# git push ssh://your_gerrit_id@review.omapzoom.org:29418/kernel/omap.git HEAD:refs/for/p-android-omap-2.6.32
+
