@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest android:versionCode="40000"
+        android:versionName="1.1.40000"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.ti.omap.android.camera">
+
+    <original-package android:name="com.ti.omap.android.camera" />
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <supports-screens android:smallScreens="false"
+            android:normalScreens="true" android:largeScreens="true"
+            android:anyDensity="true" />
+
+    <application android:icon="@mipmap/ic_launcher_camera" 
+            android:name="com.android.gallery3d.app.GalleryAppImpl"
+            android:theme="@style/ThemeCamera"
+            android:logo="@mipmap/ic_launcher_camera"
+            android:hardwareAccelerated="true"
+            android:largeHeap="@bool/config_largeHeap">
+        <uses-library android:name="com.google.android.media.effects" android:required="false" />
+        <uses-library android:name="com.ti.omap.android.cpcam" android:required="false" />
+        <activity android:name="com.ti.omap.android.camera.Camera"
+                android:taskAffinity="com.ti.omap.android.camera"
+                android:label="@string/camera_label"
+                android:theme="@style/ThemeCamera"
+                android:icon="@mipmap/ic_launcher_camera"
+                android:configChanges="orientation|screenSize|keyboardHidden"
+                android:clearTaskOnLaunch="true"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.ti.omap.android.camera.VideoCamera"
+                android:taskAffinity="com.ti.omap.android.camera"
+                android:label="@string/video_camera_label"
+                android:theme="@style/ThemeCamera"
+                android:configChanges="orientation|screenSize|keyboardHidden"
+                android:icon="@mipmap/ic_launcher_video_camera"
+                android:clearTaskOnLaunch="true"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ti.omap.android.camera.PanoramaActivity"
+                android:taskAffinity="com.ti.omap.android.camera"
+                android:label="@string/pano_dialog_title"
+                android:theme="@style/ThemeCamera"
+                android:configChanges="orientation|screenSize|keyboardHidden"
+                android:clearTaskOnLaunch="true"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+        </activity>
+        <activity android:name="com.ti.omap.android.camera.CPCam"
+                android:taskAffinity="com.ti.omap.android.camera"
+                android:label="@string/cpcam_camera_label"
+                android:theme="@style/ThemeCamera"
+                android:configChanges="orientation|screenSize|keyboardHidden"
+                android:clearTaskOnLaunch="true"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+        </activity>
+        <receiver android:name="com.android.gallery3d.gadget.PhotoAppWidgetProvider"
+                android:label="@string/appwidget_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                    android:resource="@xml/widget_info" />
+        </receiver>
+        <receiver android:name="com.android.gallery3d.app.PackagesMonitor">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ti.omap.android.camera.CameraButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.CAMERA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ti.omap.android.camera.DisableCameraReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.android.gallery3d.gadget.WidgetService"
+                android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <activity android:name="com.android.gallery3d.gadget.WidgetConfigure"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:theme="@style/android:Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

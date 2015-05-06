@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) Texas Instruments - http://www.ti.com/
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout android:id="@+id/ip_fields"
+                    style="@style/ethernet_item">
+
+                <TextView
+                        style="@style/ethernet_item_label"
+                        android:text="@string/ethernet_ip_settings" />
+
+                <Spinner android:id="@+id/ip_settings"
+                        style="@style/ethernet_item_content"
+                        android:prompt="@string/ethernet_ip_settings"
+                        android:entries="@array/ethernet_ip_settings" />
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/staticip"
+                    style="@style/ethernet_section"
+                    android:visibility="gone">
+                <LinearLayout
+                        style="@style/ethernet_item" >
+                    <TextView
+                            style="@style/ethernet_item_label"
+                            android:text="@string/ethernet_ip_settings" />
+
+                    <EditText android:id="@+id/ipaddress"
+                            style="@style/ethernet_item_content"
+                            android:singleLine="true"
+                            android:hint="@string/ethernet_ip_address_hint"
+                            android:inputType="textNoSuggestions" />
+                </LinearLayout>
+
+                <LinearLayout
+                        style="@style/ethernet_item" >
+                    <TextView
+                            style="@style/ethernet_item_label"
+                            android:text="@string/ethernet_gateway" />
+
+                    <EditText android:id="@+id/gateway"
+                            style="@style/ethernet_item_content"
+                            android:singleLine="true"
+                            android:hint="@string/ethernet_gateway_hint"
+                            android:inputType="textNoSuggestions" />
+                </LinearLayout>
+
+                <LinearLayout
+                        style="@style/ethernet_item" >
+                    <TextView
+                            style="@style/ethernet_item_label"
+                            android:text="@string/ethernet_network_prefix_length" />
+
+                    <EditText android:id="@+id/network_prefix_length"
+                            style="@style/ethernet_item_content"
+                            android:singleLine="true"
+                            android:hint="@string/ethernet_network_prefix_length_hint"
+                            android:inputType="number" />
+                </LinearLayout>
+                <LinearLayout
+                        style="@style/ethernet_item" >
+                    <TextView
+                            style="@style/ethernet_item_label"
+                            android:text="@string/ethernet_dns1" />
+
+                    <EditText android:id="@+id/dns1"
+                            style="@style/ethernet_item_content"
+                            android:singleLine="true"
+                            android:hint="@string/ethernet_dns1_hint"
+                            android:inputType="textNoSuggestions" />
+                </LinearLayout>
+
+                <LinearLayout
+                        style="@style/ethernet_item" >
+                    <TextView
+                            style="@style/ethernet_item_label"
+                            android:text="@string/ethernet_dns2" />
+
+                    <EditText android:id="@+id/dns2"
+                            style="@style/ethernet_item_content"
+                            android:singleLine="true"
+                            android:hint="@string/ethernet_dns2_hint"
+                            android:inputType="textNoSuggestions" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
