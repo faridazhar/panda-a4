@@ -1,0 +1,5 @@
+<version date="2012-09-09 17:28:51.168093" ip="bt" ver="blueti-1.2.3.7">
+  <component name="bluez" ver="4.99" />
+  <component name="android-kernel" ver="3.0.31" />
+  <component name="bluetooth-next-kernel" ver="3.3.0-rc6" />
+</version>
