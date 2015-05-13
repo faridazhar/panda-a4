@@ -1,4 +1,7 @@
 4AJ.2.2/mydroid/out
+4AJ.2.2/mydroid/logs
+4AJ.2.2/mydroid/external/eclipse-basebuilder/src/eclipse-sourceBuild-srcIncluded-3.6.2.zip
+4AJ.2.2/mydroid/prebuilts/eclipse/platform/org.eclipse.platform-3.7.2.zip
 4AJ.2.2/kernel/android-3.0/arch/arm/boot/zImage
 4AJ.2.2/u-boot/u-boot.img
 4AJ.2.2/omap4_sd_files_panda/MLO
